@@ -9,19 +9,27 @@
 /* Begin PBXBuildFile section */
 		21550BB7295DDF880060E590 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BB6295DDF880060E590 /* AppDelegate.swift */; };
 		21550BB9295DDF880060E590 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BB8295DDF880060E590 /* SceneDelegate.swift */; };
-		21550BBB295DDF880060E590 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BBA295DDF880060E590 /* ViewController.swift */; };
+		21550BBB295DDF880060E590 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BBA295DDF880060E590 /* MainTabBarController.swift */; };
 		21550BC0295DDF8C0060E590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21550BBF295DDF8C0060E590 /* Assets.xcassets */; };
 		21550BC3295DDF8C0060E590 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21550BC1295DDF8C0060E590 /* LaunchScreen.storyboard */; };
+		21550BCC295EE46B0060E590 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BCB295EE46A0060E590 /* HomeViewController.swift */; };
+		21550BCE295EE4850060E590 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BCD295EE4850060E590 /* UpcomingViewController.swift */; };
+		21550BD0295EE4C80060E590 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BCF295EE4C80060E590 /* SearchViewController.swift */; };
+		21550BD2295EE4DA0060E590 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BD1295EE4DA0060E590 /* DownloadsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		21550BB3295DDF880060E590 /* NetflixUsingSwift5andUIKitWithoutStoryboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixUsingSwift5andUIKitWithoutStoryboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21550BB6295DDF880060E590 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21550BB8295DDF880060E590 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		21550BBA295DDF880060E590 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		21550BBA295DDF880060E590 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		21550BBF295DDF8C0060E590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21550BC2295DDF8C0060E590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21550BC4295DDF8C0060E590 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21550BCB295EE46A0060E590 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		21550BCD295EE4850060E590 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
+		21550BCF295EE4C80060E590 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		21550BD1295EE4DA0060E590 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		21550BB5295DDF880060E590 /* NetflixUsingSwift5andUIKitWithoutStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				21550BCA295EE4380060E590 /* Controller */,
 				21550BB6295DDF880060E590 /* AppDelegate.swift */,
 				21550BB8295DDF880060E590 /* SceneDelegate.swift */,
-				21550BBA295DDF880060E590 /* ViewController.swift */,
+				21550BBA295DDF880060E590 /* MainTabBarController.swift */,
 				21550BBF295DDF8C0060E590 /* Assets.xcassets */,
 				21550BC1295DDF8C0060E590 /* LaunchScreen.storyboard */,
 				21550BC4295DDF8C0060E590 /* Info.plist */,
 			);
 			path = NetflixUsingSwift5andUIKitWithoutStoryboard;
+			sourceTree = "<group>";
+		};
+		21550BCA295EE4380060E590 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21550BCB295EE46A0060E590 /* HomeViewController.swift */,
+				21550BCD295EE4850060E590 /* UpcomingViewController.swift */,
+				21550BCF295EE4C80060E590 /* SearchViewController.swift */,
+				21550BD1295EE4DA0060E590 /* DownloadsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,9 +154,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21550BBB295DDF880060E590 /* ViewController.swift in Sources */,
+				21550BD0295EE4C80060E590 /* SearchViewController.swift in Sources */,
+				21550BBB295DDF880060E590 /* MainTabBarController.swift in Sources */,
+				21550BD2295EE4DA0060E590 /* DownloadsViewController.swift in Sources */,
 				21550BB7295DDF880060E590 /* AppDelegate.swift in Sources */,
 				21550BB9295DDF880060E590 /* SceneDelegate.swift in Sources */,
+				21550BCE295EE4850060E590 /* UpcomingViewController.swift in Sources */,
+				21550BCC295EE46B0060E590 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
