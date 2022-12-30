@@ -11,6 +11,7 @@ import SwiftUI
 class HomeViewController: UIViewController {
     
     private var didViewLayoutForFirstTime = false
+    private let sectionTitles = ["Trending Movies", "Popular", "Trending TV", "Upcoming Movies", "Top Rated"]
     
     private let homeFeedTable = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -25,7 +26,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        configureNavBar()
         view.backgroundColor = .systemBackground
         
         view.addSubview(homeFeedTable)
@@ -62,7 +63,23 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
+    private func configureNavBar() {
+        var logoImage = UIImage(named: "netflix_logo")
+        logoImage = logoImage?.withRenderingMode(.alwaysOriginal)
+        let leftBarButtonItem = UIBarButtonItem(
+            image: logoImage, style: .plain, target: nil, action: nil)
+        navigationItem.leftBarButtonItem = leftBarButtonItem
+            
+        
+        navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(
+                image: UIImage(systemName: "person"), style: .done, target: nil, action: nil),
+            UIBarButtonItem(
+                image: UIImage(systemName: "play.rectangle"), style: .done, target: nil, action: nil)
+        ]
+        
+        navigationController?.navigationBar.tintColor = .label
+    }
     
 }
 
@@ -92,7 +109,20 @@ extension HomeViewController:
     UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 20
+        return sectionTitles.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        sectionTitles[section]
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else {
+            return
+        }
+        header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
+        header.textLabel?.textColor = .label
+        header.textLabel?.text = header.textLabel?.text?.lowercased()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -114,6 +144,12 @@ extension HomeViewController:
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0, -offset))
     }
     
 }

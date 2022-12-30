@@ -87,6 +87,7 @@ class HeroHeaderView: UIView {
         let gradientLayer = CAGradientLayer()
         gradientLayer.colors = [
             UIColor.clear.cgColor,
+            UIColor.clear.cgColor,
             UIColor.systemBackground.cgColor
         ]
         gradientLayer.frame = frame
