@@ -16,6 +16,8 @@
 		21550BCE295EE4850060E590 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BCD295EE4850060E590 /* UpcomingViewController.swift */; };
 		21550BD0295EE4C80060E590 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BCF295EE4C80060E590 /* SearchViewController.swift */; };
 		21550BD2295EE4DA0060E590 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BD1295EE4DA0060E590 /* DownloadsViewController.swift */; };
+		21550BD9295F0EC00060E590 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BD8295F0EC00060E590 /* CollectionViewTableViewCell.swift */; };
+		21550BDB295F1D310060E590 /* HeroHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21550BDA295F1D310060E590 /* HeroHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		21550BCD295EE4850060E590 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
 		21550BCF295EE4C80060E590 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		21550BD1295EE4DA0060E590 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
+		21550BD8295F0EC00060E590 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		21550BDA295F1D310060E590 /* HeroHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,11 @@
 		21550BB5295DDF880060E590 /* NetflixUsingSwift5andUIKitWithoutStoryboard */ = {
 			isa = PBXGroup;
 			children = (
+				21550BD7295F0E9A0060E590 /* Managers */,
+				21550BD6295F0E920060E590 /* Resources */,
+				21550BD5295F0D870060E590 /* Models */,
+				21550BD4295F0D7E0060E590 /* Views */,
+				21550BD3295F0D670060E590 /* ViewModels */,
 				21550BCA295EE4380060E590 /* Controller */,
 				21550BB6295DDF880060E590 /* AppDelegate.swift */,
 				21550BB8295DDF880060E590 /* SceneDelegate.swift */,
@@ -82,6 +91,43 @@
 				21550BD1295EE4DA0060E590 /* DownloadsViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		21550BD3295F0D670060E590 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		21550BD4295F0D7E0060E590 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				21550BD8295F0EC00060E590 /* CollectionViewTableViewCell.swift */,
+				21550BDA295F1D310060E590 /* HeroHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		21550BD5295F0D870060E590 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		21550BD6295F0E920060E590 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		21550BD7295F0E9A0060E590 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +202,9 @@
 			files = (
 				21550BD0295EE4C80060E590 /* SearchViewController.swift in Sources */,
 				21550BBB295DDF880060E590 /* MainTabBarController.swift in Sources */,
+				21550BD9295F0EC00060E590 /* CollectionViewTableViewCell.swift in Sources */,
 				21550BD2295EE4DA0060E590 /* DownloadsViewController.swift in Sources */,
+				21550BDB295F1D310060E590 /* HeroHeaderView.swift in Sources */,
 				21550BB7295DDF880060E590 /* AppDelegate.swift in Sources */,
 				21550BB9295DDF880060E590 /* SceneDelegate.swift in Sources */,
 				21550BCE295EE4850060E590 /* UpcomingViewController.swift in Sources */,
