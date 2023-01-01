@@ -22,7 +22,7 @@ class HeroHeaderView: UIView {
     private let playButton = {
         let button = UIButton()
         button.setTitle("Play", for: .normal)
-        button.layer.borderColor = UIColor.label.cgColor
+        button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 5
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -33,7 +33,7 @@ class HeroHeaderView: UIView {
     private let downloadButton = {
         let button = UIButton()
         button.setTitle("Download", for: .normal)
-        button.layer.borderColor = UIColor.label.cgColor
+        button.layer.borderColor = UIColor.white.cgColor
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 5
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -88,7 +88,7 @@ class HeroHeaderView: UIView {
         gradientLayer.colors = [
             UIColor.clear.cgColor,
             UIColor.clear.cgColor,
-            UIColor.systemBackground.cgColor
+            UIColor.black.cgColor
         ]
         gradientLayer.frame = frame
         layer.addSublayer(gradientLayer)
